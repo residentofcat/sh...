@@ -1,0 +1,126 @@
+
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+body{
+	background-color: black;
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+	color: #cccccc;
+	font-size: 24px;
+	text-align: center;
+	cursor: url(../img/галочка-красная.cur), auto;
+
+}
+
+.content{
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+span{
+	background: -webkit-linear-gradient(#cccccc, #666666);
+	 -webkit-background-clip: text;
+	 -webkit-text-fill-color: transparent;
+	 display: inline-block;
+	 margin-top: 25%;
+}
+
+span:hover{
+	text-shadow: 3px 3px 15px #e1e1e1;
+}
+
+span:active{
+	text-shadow: 3px 3px 25px #e1e1e1;
+	font-size: 26px;
+}
+.hidden-text{
+    background: -webkit-linear-gradient(#cccccc, #666666);
+    background: -o-linear-gradient(#cccccc, #666666);
+	background: linear-gradient(#cccccc, #666666);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding-top: 100px;
+	position: fixed;
+	left: 21.5%;
+	bottom: 0.01%;
+}
+.photo{
+	margin: 0 auto;
+	position: fixed;
+	left: 33%;
+	bottom: 0.01%;
+	opacity: 0.7;
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+.photo:hover{
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 0.3s linear;
+}
+.photo{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear, visibility 0s 2s;
+} 
+
+.photo,
+.hidden-text {
+    display: block;
+    overflow: hidden;
+}
+.photo {
+    opacity: 1;
+}
+.hidden-text {
+	visibility: hidden;
+    opacity: 0;
+}
+
+.content_under:hover .photo {
+    opacity: 0;
+}
+.content_under:hover .hidden-text {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.3s linear;
+}
